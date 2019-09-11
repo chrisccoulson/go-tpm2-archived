@@ -1,6 +1,7 @@
 language: go
 dist: xenial
-before_install:
+install:
+  - sudo snap install core18
   - sudo snap install --edge tpm2-simulator-chrisccoulson
 script:
   - ./run-tests --with-mssim
