@@ -3,6 +3,7 @@ dist: xenial
 install:
   - sudo snap install core18
   - sudo snap install --edge tpm2-simulator-chrisccoulson
+  - ./get-deps
 script:
   - ./run-tests --with-mssim
   - go vet ./...
