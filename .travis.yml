@@ -1,9 +1,7 @@
 language: go
 dist: xenial
-addons:
-  snaps:
-    - name: tpm2-simulator-chrisccoulson
-    - channel: edge
+before_install:
+  - sudo snap install --edge tpm2-simulator-chrisccoulson
 script:
   - ./run-tests --with-mssim
   - go vet ./...
