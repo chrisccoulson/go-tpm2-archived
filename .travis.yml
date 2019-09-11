@@ -1,0 +1,9 @@
+language: go
+dist: xenial
+addons:
+  snaps:
+    - name: tpm2-simulator-chrisccoulson
+    - channel: edge
+script:
+  - ./run-tests --with-mssim
+  - go vet ./...
